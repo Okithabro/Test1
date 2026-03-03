@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>VEGA — Born to Dominate | Luxury Sports Car</title>
+  <meta name="description" content="Experience the pinnacle of automotive engineering. The VEGA sports car — raw power meets breathtaking elegance. Available now for purchase."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script>tailwind.config={theme:{extend:{colors:{'vr':'#DC2626','vg':'#D4AF37','vdark':'#050505'}}}}</script>
+</head>
+<body class="bg-[#050505] text-white">
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="index.html" class="nav-logo">VEGA</a>
+    <div class="nav-links flex items-center gap-8">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="specs.html">Specs</a>
+      <a href="contact.html" class="nav-cta">Buy Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close-btn" id="mobileClose">✕</button>
+  <a href="index.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="specs.html">Specs</a>
+  <a href="contact.html" style="color:#DC2626">Buy Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero-section">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-bg-glow"></div>
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full pt-24">
+    <div>
+      <div class="hero-badge anim-up"><span class="badge-dot"></span>New Release 2025</div>
+      <h1 class="hero-title anim-up d1"><span class="t1">THE</span><span class="t2">VEGA</span></h1>
+      <p class="hero-sub anim-up d2">Born from the stars. Engineered for the road. The VEGA redefines what a sports car can be — pure, precise, and breathtakingly powerful.</p>
+      <div class="hero-price anim-up d3">$285,000 <span>/ Starting Price</span></div>
+      <div class="flex flex-wrap gap-4 anim-up d4">
+        <a href="contact.html" class="btn-primary">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Buy Now
+        </a>
+        <a href="gallery.html" class="btn-secondary">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          View Gallery
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-center anim-up d3">
+      <img src="images/vega_hero.png" alt="VEGA Sports Car" class="hero-car-img"/>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4">
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count="2.7" data-decimal="1"></span><span class="stat-unit">s</span></div>
+        <div class="stat-label">0–60 mph</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count="220" data-suffix=""></span><span class="stat-unit">mph</span></div>
+        <div class="stat-label">Top Speed</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count="750"></span><span class="stat-unit">hp</span></div>
+        <div class="stat-label">Horsepower</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count="4" data-suffix=""></span><span class="stat-unit">L</span></div>
+        <div class="stat-label">V8 Twin-Turbo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-14 reveal">
+      <div class="section-badge">Why VEGA</div>
+      <h2 class="section-title">Engineered for <span style="background:linear-gradient(135deg,#DC2626,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Perfection</span></h2>
+      <div class="section-line"></div>
+      <p class="text-gray-400 max-w-xl text-sm leading-7">Every curve, every component, every calculation — built with a singular mission: to dominate every road it graces.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="feature-card reveal">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Twin-Turbo V8</div>
+        <p class="feature-desc">Our hand-built 4.0L twin-turbo V8 delivers 750 horsepower and 680 lb-ft of torque — unleashing pure acceleration on demand.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.1s">
+        <div class="feature-icon">🏎️</div>
+        <div class="feature-title">Active Aerodynamics</div>
+        <p class="feature-desc">Adaptive aerodynamic systems including an active rear wing automatically adjust to maximize downforce and minimize drag at every speed.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.2s">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">Precision Handling</div>
+        <p class="feature-desc">Carbon-ceramic brakes, magnetic suspension, and all-wheel steering deliver unmatched control and razor-sharp precision on any surface.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.1s">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-title">Carbon Fiber Body</div>
+        <p class="feature-desc">A full carbon fiber monocoque chassis keeps weight at just 1,380 kg — combining extraordinary rigidity with stunning performance.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.2s">
+        <div class="feature-icon">💎</div>
+        <div class="feature-title">Luxury Interior</div>
+        <p class="feature-desc">Hand-stitched leather, alcantara suede, and a fully digital cockpit create an environment that is as dramatic as the drive itself.</p>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:.3s">
+        <div class="feature-icon">🚀</div>
+        <div class="feature-title">Launch Control</div>
+        <p class="feature-desc">Advanced launch control system ensures maximum traction and perfect power delivery from a standing start every single time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY PREVIEW -->
+<section class="py-24 px-6" style="background:#0f0f0f">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 reveal">
+      <div>
+        <div class="section-badge">Visual Excellence</div>
+        <h2 class="section-title">The VEGA in Focus</h2>
+        <div class="section-line"></div>
+      </div>
+      <a href="gallery.html" class="btn-secondary text-sm">View Full Gallery →</a>
+    </div>
+    <div class="preview-grid">
+      <div class="preview-item span-2 reveal-left">
+        <img src="images/vega_side.png" alt="VEGA Side View"/>
+        <div class="preview-overlay">
+          <span style="font-family:'Orbitron',sans-serif;font-size:.8rem;letter-spacing:.1em">SIDE PROFILE</span>
+        </div>
+      </div>
+      <div class="preview-item reveal-right">
+        <img src="images/vega_interior.png" alt="VEGA Interior"/>
+        <div class="preview-overlay">
+          <span style="font-family:'Orbitron',sans-serif;font-size:.8rem;letter-spacing:.1em">INTERIOR</span>
+        </div>
+      </div>
+      <div class="preview-item reveal">
+        <img src="images/vega_rear.png" alt="VEGA Rear View"/>
+        <div class="preview-overlay">
+          <span style="font-family:'Orbitron',sans-serif;font-size:.8rem;letter-spacing:.1em">REAR VIEW</span>
+        </div>
+      </div>
+      <div class="preview-item span-2 reveal">
+        <img src="images/vega_engine.png" alt="VEGA Engine"/>
+        <div class="preview-overlay">
+          <span style="font-family:'Orbitron',sans-serif;font-size:.8rem;letter-spacing:.1em">ENGINE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="max-w-3xl mx-auto px-6 reveal">
+    <div class="section-badge">Your Dream Awaits</div>
+    <h2 class="section-title mb-4">Ready to Own <br/><span style="background:linear-gradient(135deg,#DC2626,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">the VEGA?</span></h2>
+    <p class="text-gray-400 mb-10 text-base leading-7 max-w-xl mx-auto">Join the exclusive circle of VEGA owners. Limited units available. Configure yours today and experience automotive excellence like never before.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="contact.html" class="btn-primary">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        Request a Quote
+      </a>
+      <a href="specs.html" class="btn-secondary">View Full Specs</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b" style="border-color:rgba(255,255,255,0.08)">
+      <div class="md:col-span-2">
+        <div class="footer-logo mb-4">VEGA</div>
+        <p class="text-gray-500 text-sm leading-7 max-w-sm">Crafted for those who demand more. The VEGA is not just a car — it's a statement of absolute excellence and uncompromising performance.</p>
+        <div class="flex gap-3 mt-5">
+          <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶️</a>
+          <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-btn" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Orbitron',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:1rem;color:white">Navigation</h4>
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="specs.html" class="footer-link">Specifications</a>
+        <a href="contact.html" class="footer-link">Buy Now</a>
+      </div>
+      <div>
+        <h4 style="font-family:'Orbitron',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:1rem;color:white">Contact</h4>
+        <p class="footer-link">📍 Colombo, Sri Lanka</p>
+        <p class="footer-link">📞 +94 11 234 5678</p>
+        <p class="footer-link">✉️ hello@vegacar.lk</p>
+        <p class="footer-link">🕐 Mon–Sat: 9AM–6PM</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center justify-between gap-4 pt-6">
+      <p class="text-gray-600 text-xs">© 2025 VEGA Automotive. All rights reserved.</p>
+      <p class="text-gray-600 text-xs">Designed with ❤️ for performance enthusiasts</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

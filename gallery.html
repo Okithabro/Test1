@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>VEGA Gallery — Visual Excellence</title>
+    <meta name="description"
+        content="Explore the VEGA sports car through stunning photography. Interior, exterior, engine and more." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>tailwind.config = { theme: { extend: { colors: { 'vr': '#DC2626', 'vg': '#D4AF37' } } } }</script>
+</head>
+
+<body class="bg-[#050505] text-white">
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="nav-logo">VEGA</a>
+            <div class="nav-links flex items-center gap-8">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="specs.html">Specs</a>
+                <a href="contact.html" class="nav-cta">Buy Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close-btn" id="mobileClose">✕</button>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="specs.html">Specs</a>
+        <a href="contact.html" style="color:#DC2626">Buy Now</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero text-center">
+        <canvas id="particle-canvas"></canvas>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="section-badge anim-up">Visual Excellence</div>
+            <h1 class="section-title anim-up d1" style="font-size:clamp(2rem,6vw,4rem)">The VEGA in <span
+                    style="background:linear-gradient(135deg,#DC2626,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Focus</span>
+            </h1>
+            <div class="section-line mx-auto anim-up d2"></div>
+            <p class="text-gray-400 anim-up d3 max-w-lg mx-auto text-sm leading-7">Every angle is a masterpiece. Explore
+                the VEGA through our curated collection of photography that captures power, elegance and precision.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-3 justify-center mb-12 reveal">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="exterior">Exterior</button>
+                <button class="filter-btn" data-filter="interior">Interior</button>
+                <button class="filter-btn" data-filter="engine">Engine</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Exterior -->
+                <div class="gal-item filterable reveal" data-cat="exterior" data-lb="images/vega_hero.png">
+                    <img src="images/vega_hero.png" alt="VEGA Front View" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — Front View</div>
+                    </div>
+                </div>
+                <div class="gal-item filterable reveal" data-cat="exterior" data-lb="images/vega_side.png">
+                    <img src="images/vega_side.png" alt="VEGA Side Profile" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — Side Profile</div>
+                    </div>
+                </div>
+                <div class="gal-item filterable reveal" data-cat="exterior" data-lb="images/vega_rear.png">
+                    <img src="images/vega_rear.png" alt="VEGA Rear View" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — Rear View</div>
+                    </div>
+                </div>
+                <!-- Interior -->
+                <div class="gal-item filterable reveal" data-cat="interior" data-lb="images/vega_interior.png">
+                    <img src="images/vega_interior.png" alt="VEGA Interior" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — Cockpit</div>
+                    </div>
+                </div>
+                <!-- Engine -->
+                <div class="gal-item filterable reveal" data-cat="engine" data-lb="images/vega_engine.png">
+                    <img src="images/vega_engine.png" alt="VEGA Engine" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — V8 Twin-Turbo</div>
+                    </div>
+                </div>
+                <!-- Repeat with different styles for visual depth -->
+                <div class="gal-item filterable reveal" data-cat="exterior" data-lb="images/vega_side.png">
+                    <img src="images/vega_side.png" alt="VEGA at Sunset" style="filter:sepia(.2) saturate(1.4)" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — Golden Hour</div>
+                    </div>
+                </div>
+                <div class="gal-item filterable reveal" data-cat="interior" data-lb="images/vega_interior.png">
+                    <img src="images/vega_interior.png" alt="VEGA Dashboard"
+                        style="filter:brightness(.85) hue-rotate(10deg)" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — Dashboard</div>
+                    </div>
+                </div>
+                <div class="gal-item filterable reveal" data-cat="exterior" data-lb="images/vega_hero.png">
+                    <img src="images/vega_hero.png" alt="VEGA Night" style="filter:brightness(.6) contrast(1.3)" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">VEGA — Night Mode</div>
+                    </div>
+                </div>
+                <div class="gal-item filterable reveal" data-cat="engine" data-lb="images/vega_engine.png">
+                    <img src="images/vega_engine.png" alt="Engine Detail" />
+                    <div class="gal-overlay">
+                        <div class="gal-zoom">🔍</div>
+                        <div class="gal-label">V8 — Engine Detail</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close">✕</button>
+        <button class="lb-nav lb-prev">‹</button>
+        <img class="lightbox-img" src="" alt="VEGA Gallery" />
+        <button class="lb-nav lb-next">›</button>
+    </div>
+
+    <!-- CTA STRIP -->
+    <section class="py-16 px-6 text-center" style="background:#0f0f0f;border-top:1px solid rgba(255,255,255,0.06)">
+        <div class="reveal">
+            <p class="text-gray-400 text-sm mb-6">Impressed by what you see? Make it yours.</p>
+            <a href="contact.html" class="btn-primary mx-auto" style="display:inline-flex">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Order Your VEGA
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b"
+                style="border-color:rgba(255,255,255,0.08)">
+                <div class="md:col-span-2">
+                    <div class="footer-logo mb-4">VEGA</div>
+                    <p class="text-gray-500 text-sm leading-7 max-w-sm">Crafted for those who demand more. The VEGA is
+                        not just a car — it's a statement of absolute excellence.</p>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#" class="social-btn">📸</a>
+                        <a href="#" class="social-btn">▶️</a>
+                        <a href="#" class="social-btn">🐦</a>
+                    </div>
+                </div>
+                <div>
+                    <h4
+                        style="font-family:'Orbitron',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:1rem;color:white">
+                        Navigation</h4>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                    <a href="specs.html" class="footer-link">Specifications</a>
+                    <a href="contact.html" class="footer-link">Buy Now</a>
+                </div>
+                <div>
+                    <h4
+                        style="font-family:'Orbitron',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:1rem;color:white">
+                        Contact</h4>
+                    <p class="footer-link">📍 Colombo, Sri Lanka</p>
+                    <p class="footer-link">📞 +94 11 234 5678</p>
+                    <p class="footer-link">✉️ hello@vegacar.lk</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-6">
+                <p class="text-gray-600 text-xs">© 2025 VEGA Automotive. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

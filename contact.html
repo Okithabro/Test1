@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Buy Your VEGA — Contact & Order</title>
+    <meta name="description"
+        content="Ready to own the VEGA? Submit your inquiry and our team will contact you within 24 hours to begin your purchase journey." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>tailwind.config = { theme: { extend: { colors: { 'vr': '#DC2626', 'vg': '#D4AF37' } } } }</script>
+</head>
+
+<body class="bg-[#050505] text-white">
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="nav-logo">VEGA</a>
+            <div class="nav-links flex items-center gap-8">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="specs.html">Specs</a>
+                <a href="contact.html" class="nav-cta">Buy Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close-btn" id="mobileClose">✕</button>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="specs.html">Specs</a>
+        <a href="contact.html" style="color:#DC2626">Buy Now</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero text-center">
+        <canvas id="particle-canvas"></canvas>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="section-badge anim-up">Exclusive Ownership</div>
+            <h1 class="section-title anim-up d1" style="font-size:clamp(2rem,6vw,4rem)">Order Your <span
+                    style="background:linear-gradient(135deg,#DC2626,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">VEGA</span>
+            </h1>
+            <div class="section-line mx-auto anim-up d2"></div>
+            <p class="text-gray-400 anim-up d3 max-w-lg mx-auto text-sm leading-7">Join the exclusive circle of VEGA
+                owners. Limited units available globally. Submit your inquiry and our team will contact you within 24
+                hours.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+
+                <!-- INFO CARDS -->
+                <div class="lg:col-span-2 space-y-5">
+                    <div class="reveal">
+                        <div class="section-badge mb-2">Get In Touch</div>
+                        <h2 class="section-title" style="font-size:1.5rem">We'll guide you <br />every step of the way
+                        </h2>
+                        <div class="section-line"></div>
+                        <p class="text-gray-400 text-sm leading-7">Our automotive specialists are ready to assist you in
+                            selecting the perfect configuration, arranging a private test drive, and completing your
+                            purchase.</p>
+                    </div>
+                    <div class="info-card reveal" style="transition-delay:.1s">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <div class="info-title">Call Us</div>
+                            <div class="info-val">+94 11 234 5678<br />Mon–Sat: 9AM – 6PM</div>
+                        </div>
+                    </div>
+                    <div class="info-card reveal" style="transition-delay:.2s">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <div class="info-title">Email Us</div>
+                            <div class="info-val">hello@vegacar.lk<br />We reply within 2 hours</div>
+                        </div>
+                    </div>
+                    <div class="info-card reveal" style="transition-delay:.3s">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <div class="info-title">Visit Showroom</div>
+                            <div class="info-val">45 Galle Road, Colombo 03<br />Sri Lanka</div>
+                        </div>
+                    </div>
+                    <div class="info-card reveal" style="transition-delay:.4s">
+                        <div class="info-icon">🚗</div>
+                        <div>
+                            <div class="info-title">Test Drive</div>
+                            <div class="info-val">Private test drives available<br />by appointment only</div>
+                        </div>
+                    </div>
+
+                    <!-- Car preview -->
+                    <div class="reveal" style="transition-delay:.5s;margin-top:1rem">
+                        <img src="images/vega_side.png" alt="VEGA"
+                            style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,0.08);filter:drop-shadow(0 0 30px rgba(220,38,38,0.2))" />
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                <div class="lg:col-span-3 reveal">
+                    <div
+                        style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:2.5rem">
+                        <h3
+                            style="font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.08em;margin-bottom:.5rem">
+                            Purchase Inquiry Form</h3>
+                        <p class="text-gray-500 text-sm mb-8">Fill in your details and we'll be in touch within 24
+                            hours.</p>
+
+                        <form id="contactForm">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5">
+                                <div class="form-group">
+                                    <label class="form-label" for="firstName">First Name *</label>
+                                    <input class="form-input" type="text" id="firstName" name="firstName"
+                                        placeholder="John" required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="lastName">Last Name *</label>
+                                    <input class="form-input" type="text" id="lastName" name="lastName"
+                                        placeholder="Doe" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email Address *</label>
+                                <input class="form-input" type="email" id="email" name="email"
+                                    placeholder="john@example.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone Number *</label>
+                                <input class="form-input" type="tel" id="phone" name="phone"
+                                    placeholder="+94 77 123 4567" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="country">Country</label>
+                                <select class="form-select" id="country" name="country">
+                                    <option value="">Select your country</option>
+                                    <option>Sri Lanka</option>
+                                    <option>United Arab Emirates</option>
+                                    <option>United Kingdom</option>
+                                    <option>United States</option>
+                                    <option>Singapore</option>
+                                    <option>Australia</option>
+                                    <option>Germany</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="budget">Budget Range</label>
+                                <select class="form-select" id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option>$285,000 – $320,000 (Base)</option>
+                                    <option>$320,000 – $380,000 (Configured)</option>
+                                    <option>$380,000+ (Full Custom)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="color">Preferred Color</label>
+                                <select class="form-select" id="color" name="color">
+                                    <option value="">Select preferred color</option>
+                                    <option>Midnight Black</option>
+                                    <option>Phantom Silver</option>
+                                    <option>Inferno Red</option>
+                                    <option>Arctic White</option>
+                                    <option>Stealth Matte Grey</option>
+                                    <option>Custom Color</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Additional Message</label>
+                                <textarea class="form-input form-textarea" id="message" name="message"
+                                    placeholder="Tell us about your preferences, special requirements, or any questions you may have..."></textarea>
+                            </div>
+                            <div class="form-group flex items-start gap-3">
+                                <input type="checkbox" id="agree" name="agree" required
+                                    style="margin-top:.25rem;accent-color:#DC2626;width:1rem;height:1rem;cursor:pointer" />
+                                <label for="agree" class="text-gray-400 text-sm leading-6">I agree to be contacted by
+                                    VEGA Automotive regarding my inquiry and accept the <a href="#"
+                                        style="color:#DC2626;text-decoration:none">Privacy Policy</a>.</label>
+                            </div>
+                            <button type="submit" class="btn-primary w-full justify-center"
+                                style="font-size:.9rem;padding:1.1rem 2rem">
+                                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                                Submit Purchase Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section style="background:#0f0f0f;border-top:1px solid rgba(255,255,255,0.06);padding:5rem 1.5rem">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14 reveal">
+                <div class="section-badge">Simple Process</div>
+                <h2 class="section-title">How to Own Your VEGA</h2>
+                <div class="section-line mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="text-center reveal">
+                    <div
+                        style="width:60px;height:60px;background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.2rem;color:#DC2626;margin:0 auto 1.25rem">
+                        01</div>
+                    <h4 style="font-family:'Orbitron',sans-serif;font-size:.85rem;font-weight:700;margin-bottom:.5rem">
+                        Submit Inquiry</h4>
+                    <p class="text-gray-500 text-sm leading-6">Complete our purchase inquiry form with your preferences
+                        and details.</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay:.1s">
+                    <div
+                        style="width:60px;height:60px;background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.2rem;color:#DC2626;margin:0 auto 1.25rem">
+                        02</div>
+                    <h4 style="font-family:'Orbitron',sans-serif;font-size:.85rem;font-weight:700;margin-bottom:.5rem">
+                        Consultation</h4>
+                    <p class="text-gray-500 text-sm leading-6">Our specialist will call you to discuss configuration
+                        options and pricing.</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay:.2s">
+                    <div
+                        style="width:60px;height:60px;background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.2rem;color:#DC2626;margin:0 auto 1.25rem">
+                        03</div>
+                    <h4 style="font-family:'Orbitron',sans-serif;font-size:.85rem;font-weight:700;margin-bottom:.5rem">
+                        Test Drive</h4>
+                    <p class="text-gray-500 text-sm leading-6">Arrange a private test drive at your nearest VEGA
+                        showroom.</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay:.3s">
+                    <div
+                        style="width:60px;height:60px;background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.2rem;color:#DC2626;margin:0 auto 1.25rem">
+                        04</div>
+                    <h4 style="font-family:'Orbitron',sans-serif;font-size:.85rem;font-weight:700;margin-bottom:.5rem">
+                        Take Delivery</h4>
+                    <p class="text-gray-500 text-sm leading-6">Sign, finalize, and take delivery of your hand-crafted
+                        VEGA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b"
+                style="border-color:rgba(255,255,255,0.08)">
+                <div class="md:col-span-2">
+                    <div class="footer-logo mb-4">VEGA</div>
+                    <p class="text-gray-500 text-sm leading-7 max-w-sm">Crafted for those who demand more — a statement
+                        of absolute excellence.</p>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#" class="social-btn">📸</a>
+                        <a href="#" class="social-btn">▶️</a>
+                        <a href="#" class="social-btn">🐦</a>
+                    </div>
+                </div>
+                <div>
+                    <h4
+                        style="font-family:'Orbitron',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:1rem;color:white">
+                        Navigation</h4>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                    <a href="specs.html" class="footer-link">Specifications</a>
+                    <a href="contact.html" class="footer-link">Buy Now</a>
+                </div>
+                <div>
+                    <h4
+                        style="font-family:'Orbitron',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;margin-bottom:1rem;color:white">
+                        Contact</h4>
+                    <p class="footer-link">📍 Colombo, Sri Lanka</p>
+                    <p class="footer-link">📞 +94 11 234 5678</p>
+                    <p class="footer-link">✉️ hello@vegacar.lk</p>
+                </div>
+            </div>
+            <div class="pt-6">
+                <p class="text-gray-600 text-xs">© 2025 VEGA Automotive. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
